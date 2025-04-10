@@ -52,7 +52,7 @@ export function Header() {
             justifyContent: 'space-between',
           }}
         >
-          <Box to="/" component={FrameworkLink}>
+          <Box to="/homepage" component={FrameworkLink}>
             <Logo width={175} />
           </Box>
           <Box
