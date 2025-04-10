@@ -24,7 +24,7 @@ import { Speakers } from '~/routes/Speakers';
 export const ALL_ROUTES = [
   {
     path: '/',
-    element: <Navigate to="/dashboard/home" replace />,
+    element: <Homepage />,
   },
   {
     path: '/landing',

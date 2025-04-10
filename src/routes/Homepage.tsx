@@ -1,4 +1,6 @@
 import { Box, Button, Container, Typography } from '@mui/material';
+import { useEffect } from 'react';
+import { useNavigate, useLocation } from 'react-router-dom';
 
 import { FiCheck } from 'react-icons/fi';
 import { FAQ } from '~/components/FAQ';
@@ -13,6 +15,16 @@ import { DefaultLayout } from '~/components/WebsiteLayout';
 import { FrameworkLink } from '~/framework/FrameworkLink';
 
 export function Homepage() {
+  const navigate = useNavigate();
+  const location = useLocation();
+  
+  useEffect(() => {
+    // Only redirect if directly accessing the root path
+    if (location.pathname === '/') {
+      navigate('/dashboard/home', { replace: true });
+    }
+  }, [navigate, location]);
+
   return (
     <DefaultLayout>
       <Container>
