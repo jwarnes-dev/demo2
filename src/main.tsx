@@ -1,7 +1,7 @@
 import * as React from 'react';
 import * as ReactDOM from 'react-dom/client';
 
-import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import { createBrowserRouter, RouterProvider, Navigate } from 'react-router-dom';
 import { DashboardLayout } from '~/components/DashboardLayout';
 import { LoadingScreen } from '~/components/LoadingScreen';
 import { AppProviders } from '~/context/AppProviders';
@@ -24,7 +24,7 @@ import { Speakers } from '~/routes/Speakers';
 export const ALL_ROUTES = [
   {
     path: '/',
-    element: <Homepage />,
+    element: <Navigate to="/dashboard/home" replace />,
   },
   {
     path: '/landing',
